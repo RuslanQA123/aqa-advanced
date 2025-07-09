@@ -15,5 +15,8 @@
     "url": "https://github.com/RuslanQA123/aqa-advanced/issues"
   },
   "homepage": "https://github.com/RuslanQA123/aqa-advanced#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "chalk": "^5.4.1"
+  }
 }
