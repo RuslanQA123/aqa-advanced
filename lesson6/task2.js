@@ -3,7 +3,7 @@ function isAdult(age) {
         console.log(`Adult person`);
         return true;
     }
-    
+
     else {
         console.log(`Person is not adult`);
         return false;
