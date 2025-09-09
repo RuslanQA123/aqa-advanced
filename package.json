@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write .",
+      "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -16,8 +19,25 @@
     "url": "https://github.com/RuslanQA123/aqa-advanced/issues"
   },
   "homepage": "https://github.com/RuslanQA123/aqa-advanced#readme",
-  "description": "",
   "dependencies": {
     "chalk": "^5.4.1"
-  }
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "eslint": "^9.35.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "prettier": "^3.6.2"
+  },
+  "keywords": [],
+  "description": "",
+  "lint-staged": {
+  "*.{js,jsx,ts,tsx}": [
+    "eslint --fix",
+    "prettier --write"
+  ]
+}
 }
