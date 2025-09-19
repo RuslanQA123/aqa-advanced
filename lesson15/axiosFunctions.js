@@ -1,7 +1,6 @@
-import axios from 'axios';
+const axios = require('axios');
 
-// Task1 
-export const fetchWithError = async () => {
+const fetchWithError = async () => {
   try {
     const response = await axios.get('https://jsonplaceholder.typicode.com/WRONG_URL');
     return response.data;
@@ -10,8 +9,7 @@ export const fetchWithError = async () => {
   }
 };
 
-// Task2
-export const fetchWithHeadersAndParams = async () => {
+const fetchWithHeadersAndParams = async () => {
   try {
     const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1', {
       headers: { 'Custom-Header': 'MyHeaderValue' },
@@ -23,8 +21,9 @@ export const fetchWithHeadersAndParams = async () => {
   }
 };
 
-// Task3
-export const fetchTodos = async () => {
+const fetchTodos = async () => {
   const response = await axios.get('https://jsonplaceholder.typicode.com/todos');
   return response.data;
 };
+
+module.exports = { fetchWithError, fetchWithHeadersAndParams, fetchTodos };
